@@ -1,0 +1,31 @@
+{
+  "name": "human-vs-humanity",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Human vs Humanity - a fully standalone React + TypeScript interactive decision game component.",
+  "main": "src/games/HumanVsHumanity/index.tsx",
+  "scripts": {
+    "demo": "vite",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit",
+    "test:engine": "esbuild hvh-check.ts --bundle --platform=node --format=cjs --outfile=.hvh-engine.cjs --log-level=warning && node .hvh-engine.cjs",
+    "test:dom": "esbuild hvh-dom-check.tsx --bundle --platform=node --format=cjs --external:jsdom --outfile=.hvh-dom.cjs --log-level=warning && node .hvh-dom.cjs",
+    "test:ssr": "esbuild hvh-render-check.tsx --bundle --platform=node --format=cjs --outfile=.hvh-ssr.cjs --log-level=warning && node .hvh-ssr.cjs",
+    "test": "npm run typecheck && npm run test:engine && npm run test:dom"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^30.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^29.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}

@@ -1,0 +1,34 @@
+/* Host page styles. Deliberately plain and completely separate from the game. */
+body {
+  margin: 0;
+  background: #0c0c0c;
+  color: #eee;
+  font-family: system-ui, sans-serif;
+}
+
+.host-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 20px;
+  background: #161616;
+  border-bottom: 1px solid #262626;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+
+.host-actions button {
+  margin-left: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #1d1d1d;
+  color: #eee;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+main {
+  padding: 24px 16px 60px;
+}
